@@ -15,7 +15,7 @@ if (!await fs.exists(dbPath)) {
 }
 
 export const db = new DatabaseSync(dbPath);
-export const kv = await Deno.openKv(dbPath);
+export const kv = await Deno.openKv();
 
 if (isInitDatabase) {
     await addDemoTab();
